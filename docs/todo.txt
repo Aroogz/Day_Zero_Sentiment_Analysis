@@ -1,0 +1,21 @@
+1. Data collection
+	i. figure date to start from
+	ii. Tags:
+		a. first read tweepy docs to understand capabilities for keywords
+		b. keywords: dayzero, day-zero, water, crisis, drought
+            - word cloud of tweet may help
+		c. 
+2. lookout
+	i. countries where rhino does business
+        a. get data from diego
+        
+3. Question
+    i. How is the day-zero affecting the business?
+        a. are enuiries dropping due to day-zero
+        b. are site visits dropping due to day zero
+        c. What is the sentiment on day-zero in out
+    
+4. Approach
+    
+    i.  get a feel of the information reach w.r.t business countries
+    ii.  

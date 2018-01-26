@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Data
+*.csv
+
 # Distribution / packaging
 .Python
 env/
@@ -99,3 +102,5 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+credentials.py
