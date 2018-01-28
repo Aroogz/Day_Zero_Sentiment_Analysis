@@ -4,7 +4,9 @@
 		a. first read tweepy docs to understand capabilities for keywords
 		b. keywords: dayzero, day-zero, water, crisis, drought
             - word cloud of tweet may help
-		c. 
+		c. filter retweets (tends to be redundant)
+		d. tweet parameters:
+		    text, date, location (maybe of user),
 2. lookout
 	i. countries where rhino does business
         a. get data from diego
