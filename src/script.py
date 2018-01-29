@@ -1,31 +1,29 @@
 if __name__ == "__main__":
-    import sqlite3
-    import tweepy
-    from src.credentials import twitter_setup
-    from src.tweetStreamListener import TweetStreamListener
-    # from .credentials import *
-    # from .tweetStreamListener import TweetStreamListener
+    from src.utils import *
 
-    conn = sqlite3.connect('test.db')
+    conn = create_db('twitter_data.db')  # change db name
     c = conn.cursor()
-    # c.execute("DROP TABLE tweets")
     c.execute("""
             CREATE TABLE IF NOT EXISTS tweets (
             text TEXT,
             date TEXT,
-            user INTEGER,
+            tweet_language TEXT,
+            retweet_count INTEGER,
+            favorite_count INTEGER,
+            tweet_id TEXT,
+            followers_count INTEGER,
+            friends_count INTEGER,
             location TEXT,
-            follower_count INTEGER,
+            user_id TEXT,
+            user_lang TEXT,
+            geo_enabled NUMERIC,
             verified NUMERIC,
-            retweet_count INTEGER
+            user_location TEXT
             )""")
     print("table created")
 
-    # Run the stream
     api = twitter_setup()
-    print('api set up done')
-    l = TweetStreamListener()
-    stream = tweepy.Stream(api.auth, l)
-
-    # Filter the stream for these keywords. Add whatever you want here!
+    print('api setup done')
+    listener = TweetStreamListener()
+    stream = tweepy.Stream(api.auth, listener=listener)
     stream.filter(track=['day zero water', 'water crisis cape', 'rain cape day zero', 'cape town drought'])

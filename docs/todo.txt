@@ -6,18 +6,34 @@
             - word cloud of tweet may help
 		c. filter retweets (tends to be redundant)
 		d. tweet parameters:
-		    text, date, location (maybe of user),
+		    text,
+		    created_at,
+		    lang,
+		    retweet_count,
+		    favorite_count,
+		    id_str  # tweet unique id
+		    entities[hashtags], # not needed now
+		    user:   followers_count
+		            friends_count
+		            id_str
+		            lang
+		            geo_enabled # if true, then location makes sense
+		            verified
+		            location # sometimes not informative
+
+
+
 2. lookout
 	i. countries where rhino does business
         a. get data from diego
         
 3. Question
     i. How is the day-zero affecting the business?
-        a. are enuiries dropping due to day-zero
+        a. are enquiries dropping due to day-zero
         b. are site visits dropping due to day zero
         c. What is the sentiment on day-zero in out
     
 4. Approach
     
     i.  get a feel of the information reach w.r.t business countries
-    ii.  
+    ii.  may need to create tweet class
