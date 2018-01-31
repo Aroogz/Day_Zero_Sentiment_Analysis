@@ -9,6 +9,7 @@ from src.credentials import *
 def twitter_setup():
     """
     Utility function to setup the Twitter's API
+
     with our access keys provided.
     """
     # Authentication and access using keys:
@@ -84,3 +85,4 @@ class TweetStreamListener(StreamListener):
             pass
 
         return True
+
